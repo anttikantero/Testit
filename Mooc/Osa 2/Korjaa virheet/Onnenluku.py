@@ -1,4 +1,4 @@
-#Koitetaan korjata virheet
+#Koitetaan korjata virheet. Ehkä..
 
 luku = int(input("Anna luku: "))
 if luku > 100:
