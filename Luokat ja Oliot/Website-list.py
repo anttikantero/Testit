@@ -6,15 +6,15 @@
 ### self -käsitteellä määritellään juuri tämän olion tiedot.
 
 
-class Website:
+class Website:      #luokka on website
     
-    def __init__(self, siteName):
+    def __init__(self, siteName):       # tässä on init määritys
         self.hacked = False
         self.name = siteName
         self.ip = ""
         self.platform = ""
 
-    def setAddress(self, address):
+    def setAddress(self, address):      #metodi "def"
         self.ip = address
 
     def setPlatform(self, platform):
