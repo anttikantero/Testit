@@ -11,6 +11,8 @@ class Target:
         self.server = ""
         self.IP = ""
 
+#### lisätty tähän auttomaattinen IP:n palautus käyttäen socket.gethostbyname ####
+
     def setIP(self):
         parsed_address = self.address.replace("http://", "")
         parsed_address = parsed_address.replace("https://", "")
