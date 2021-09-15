@@ -1,5 +1,7 @@
 ### XSS skanneri, joka pyytää käyttäjältä skannattavan sivuston ###
 
+# Sivun lopussa esimerkkituloksia
+
 import requests
 from pprint import pprint
 from bs4 import BeautifulSoup as bs
@@ -93,3 +95,27 @@ def scan_xss(url):
 if __name__ == "__main__":
     url = input("Anna osoite: ")    #muutettu, pyytää käyttäjää syöttämään skannattavan sivuston
     print(scan_xss(url))
+
+
+    ### Koitetut sivustot ja tulosket ###
+
+# 1
+# #https://xss-game.appspot.com/level1/frame
+# [+] Detected 1 forms on https://xss-game.appspot.com/level1/frame.
+# [+] XSS Detected on https://xss-game.appspot.com/level1/frame
+# [*] Form details:
+# {'action': '',
+#  'inputs': [{'name': 'query',
+#             'type': 'text',
+#             'value': "<Script>alert('hi')</scripT>"},
+# 'method': 'get'}
+# True
+
+# 2
+# http://testphp.vulnweb.com/artist.php?artist=1
+# [+] Detected 0 forms on http://testphp.vulnweb.com/artist.php?artist=1.
+
+# 3
+# http://20.93.141.10/cats/wp-login.php
+# [+] Detected 1 forms on http://20.93.141.10/cats/wp-login.php.
+# False
