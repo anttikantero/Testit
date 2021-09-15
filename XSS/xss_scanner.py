@@ -1,3 +1,5 @@
+### XSS skanneri, joka pyytää käyttäjältä skannattavan sivuston ###
+
 import requests
 from pprint import pprint
 from bs4 import BeautifulSoup as bs
@@ -89,5 +91,5 @@ def scan_xss(url):
 
 
 if __name__ == "__main__":
-    url = "https://xss-game.appspot.com/level1/frame"
+    url = input("Anna osoite: ")    #muutettu, pyytää käyttäjää syöttämään skannattavan sivuston
     print(scan_xss(url))
