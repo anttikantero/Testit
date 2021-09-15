@@ -106,7 +106,7 @@ def scan_sql_injection(url):
 
 if __name__ == "__main__":
     import sys
-    url = sys.argv("http://20.93.141.10/cats/?p=51")
+    #url = sys.argv("http://20.93.141.10/cats/?p=51")
     #url = "http://testphp.vulnweb.com/artists.php?artist=1"
-
+    url = "http://www.webscantest.com/datastore/search_get_by_id.php?id=4"
     scan_sql_injection(url)
